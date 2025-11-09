@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add EmailJS for form submission -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body data-theme="light">
+    <!-- Loader -->
+    <div class="loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="mobile-menu" id="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- scroll progress bar -->
+      <div id="scrollProgress" class="scroll-progress"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text fade-in">
+          <h1>
+            Hi, I'm <span class="gradient-text">Syed Mohammad Fawaz</span>
+          </h1>
+          <p>
+            B.Tech CSE (AI & ML) Student | Data Analytics Enthusiast | Problem
+            Solver | Sports Fanatic
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/syed-mohammad-fawaz"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/SMFawaz24"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:syedmdfawaz@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-image fade-in">
+          <div class="profile-img">
+            <img
+              src="https://avatars.githubusercontent.com/u/142323186?v=4"
+              alt="Profile Picture"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <p>
+            I'm a motivated learner pursuing Bachelor of Technology in Computer
+            Science and Engineering with specialization in Artificial
+            Intelligence and Machine Learning. My journey in technology is
+            driven by curiosity and a passion for data-driven decision making.
+          </p>
+          <p style="margin-top: 1rem">
+            I am specializing in Data Analytics, AI/ML techniques, and Full Stack Web
+            Development. With strong problem-solving skills and adaptability to
+            changing technological landscapes, I'm always eager to learn and
+            apply new technologies to create innovative solutions. I believe in
+            the power of technology to transform industries, especially in
+            sectors like agriculture and finance.
+          </p>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat-item">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">GitHub Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Languages Known</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title fade-in">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <h3 class="skill-category-title">
+            <i class="fas fa-code"></i>
+            Programming Languages
+          </h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Python</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>C/C++</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="80%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Java</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3 class="skill-category-title">
+            <i class="fas fa-laptop-code"></i>
+            Web Development
+          </h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>HTML/CSS</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="95%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>JavaScript</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>React</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>TypeScript</span>
+              <span>65%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="65%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3 class="skill-category-title">
+            <i class="fas fa-database"></i>
+            Tools & Technologies
+          </h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Power BI & Excel</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="90%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Git & GitHub</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>MySQL</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="80%"
+              ></div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3 class="skill-category-title">
+            <i class="fas fa-brain"></i>
+            AI & Machine Learning
+          </h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Machine Learning</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Data Analytics</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="75%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>AI Fundamentals</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="width: 0%"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title fade-in">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI AgriTech Assistant</h3>
+            <p class="project-description">
+              An AI-powered agricultural assistant for small and marginal
+              farmers featuring crop yield prediction, pest detection, and
+              weather forecasting to enhance productivity and sustainability.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">AI</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SMFawaz24/AI-AgriTech-Assistant"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Finance Tracker</h3>
+            <p class="project-description">
+              A comprehensive finance tracking application with robust financial
+              record management functionalities to help users monitor their
+              expenses and income efficiently.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">JavaSwing</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SMFawaz24/Finance-Tracker"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-moon"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Interchronos Astronomy App</h3>
+            <p class="project-description">
+              A modern astronomy application for exploring celestial phenomena
+              with interactive celestial event visualization and educational
+              tools for astronomy enthusiasts.
+            </p>
+            <div class="project-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SMFawaz24/interchronos-astronomy-app"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">SecureNet Banking</h3>
+            <p class="project-description">
+              A secure banking system application focused on providing safe and
+              reliable financial services with modern web technologies and
+              security features.
+            </p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Web Security</span>
+              <span class="tag">Banking</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SMFawaz24/SecureNet-Banking"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Data Scaler</h3>
+            <p class="project-description">
+              A capstone project for functional testing and programming,
+              demonstrating data processing and scaling techniques for efficient
+              data management.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">Data Processing</span>
+              <span class="tag">Testing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SMFawaz24/Data-Scaler" target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">More Projects on GitHub</h3>
+            <p class="project-description">
+              Explore more of my projects and contributions on GitHub. Always
+              working on new ideas and learning new technologies.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Various Tech</span>
+              <span class="tag">Open Source</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SMFawaz24?tab=repositories"
+                target="_blank"
+                ><i class="fab fa-github"></i> View All</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title fade-in">Education</h2>
+      <div class="education-timeline">
+        <div class="education-item fade-in">
+          <div class="education-content">
+            <div class="education-header">
+              <div>
+                <h3 class="education-title">Bachelor of Technology (B.Tech)</h3>
+                <p class="education-institution">
+                  Computer Science & Engineering (AI & ML), SRM Institute of
+                  Science and Technology, KTR
+                </p>
+              </div>
+              <span class="education-date">2023 - 2027</span>
+            </div>
+            <p class="education-description">
+              Currently pursuing B.Tech in Computer Science with specialization
+              in Artificial Intelligence and Machine Learning at SRM Institute
+              of Science and Technology, KTR. Actively learning Full Stack
+              Development, Data Analytics, and AI/ML techniques. Passionate
+              about data-driven decision making and innovation.
+            </p>
+          </div>
+        </div>
+
+        <div class="education-item fade-in">
+          <div class="education-content">
+            <div class="education-header">
+              <div>
+                <h3 class="education-title">Higher Secondary (XII)</h3>
+                <p class="education-institution">Study Hall School, Lucknow</p>
+              </div>
+              <span class="education-date">2021 - 2023</span>
+            </div>
+            <p class="education-description">
+              Completed Higher Secondary Education in Science stream from Study
+              Hall School, Lucknow. Developed strong foundation in Mathematics,
+              Physics, and Computer Science.
+            </p>
+          </div>
+        </div>
+
+        <div class="education-item fade-in">
+          <div class="education-content">
+            <div class="education-header">
+              <div>
+                <h3 class="education-title">Secondary (X)</h3>
+                <p class="education-institution">
+                  GD Goenka Public School, Lucknow
+                </p>
+              </div>
+              <span class="education-date">2019 - 2021</span>
+            </div>
+            <p class="education-description">
+              Completed Secondary Education with focus on Science and
+              Mathematics from GD Goenka Public School, Lucknow. Built strong
+              academic foundation and problem-solving skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title fade-in">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p>
+                <a
+                  href="mailto:syedmdfawaz@gmail.com"
+                  style="color: var(--text-light); text-decoration: none"
+                  >syedmdfawaz@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/syed-mohammad-fawaz"
+                  target="_blank"
+                  style="color: var(--text-light); text-decoration: none"
+                  >Syed Mohammad Fawaz</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <p>
+                <a
+                  href="https://github.com/SMFawaz24"
+                  target="_blank"
+                  style="color: var(--text-light); text-decoration: none"
+                  >@SMFawaz24</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form fade-in">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Syed Mohammad Fawaz. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: var(--text-light)">
+          Made with
+          <i class="fas fa-heart" style="color: var(--accent-color)"></i> and
+          <i class="fas fa-code" style="color: var(--primary-color)"></i>
+        </p>
+      </div>
+    </footer>
+
+    <!-- back-to-top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
